@@ -1,0 +1,21 @@
+version: '3'
+
+services: 
+    server_1:
+        image: python
+        command: python -m http.server 8080
+
+    server_2:
+        image: python
+        command: python -m http.server 8080
+
+    nginx:
+        build: ..
+        volumes:
+            - ./certs:/etc/nginx/ssl
+        ports:
+            - 443:8443/tcp
+        environment:
+            - SERVICE_S1_LOCATION=/server_1
+            - SERVICE_S1_HOST=server_1
+            - SERVICE_S1_PORT=8080
