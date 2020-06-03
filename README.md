@@ -1,3 +1,10 @@
+# Cancelled: better solutions already exist
+E.g.:
+
+* https://hub.docker.com/r/jwilder/nginx-proxy
+* https://github.com/sourcelair/ceryx
+* https://github.com/softek/dynamic-reverse-proxy
+
 # Nginx Reverse SSL-proxy image
 
 ## Why reverse proxying?
